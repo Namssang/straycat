@@ -38,7 +38,7 @@ public interface MypageService
 	public Map<String, Object> seMessage(Map<String, Object> map);	// 보낸 쪽지 읽기
 	
 	public Map<String, Object> readCheck(Map<String, Object> map);	// 쪽지 읽음 여부 확인
-	public Map<String, Object> sedeleteMessage(Map<String, Object> map);
-	public Map<String, Object> redeleteMessage(Map<String, Object> map);
+	public Map<String, Object> sedeleteMessage(Map<String, Object> map);	// 보낸 메세지 삭제
+	public Map<String, Object> redeleteMessage(Map<String, Object> map);		// 받은 메세지 삭제
 	
 }

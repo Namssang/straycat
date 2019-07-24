@@ -18,6 +18,95 @@ $(document).ready(function()
 		
 	});*/
 	
+	// 4가지 항목 다 일치
+	if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("100% 일치");
+		return;
+	}
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("75% 일치");
+		return;
+	}
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("75% 일치");
+		return;
+	}
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("75% 일치");
+		return;
+	}
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("75% 일치");
+		return;
+	}
+			
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}	
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}	
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}			
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}			
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}					
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )
+	{
+		$("#match").html("50% 일치");
+		return;
+	}	
+							
+	else if ( $("#ar_A1").val() == $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("25% 일치");
+		return;
+	}	
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() == $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("25% 일치");
+		return;
+	}	
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() == $("#ap_A3").val() && $("#ar_A4").val() != $("#ap_A4").val() )
+	{
+		$("#match").html("25% 일치");
+		return;
+	}		
+	else if ( $("#ar_A1").val() != $("#ap_A1").val() && $("#ar_A2").val() != $("#ap_A2").val() && $("#ar_A3").val() != $("#ap_A3").val() && $("#ar_A4").val() == $("#ap_A4").val() )	
+	{
+		$("#match").html("25% 일치");
+		return;
+	}	
+	else
+	{
+		$("#match").html("0% 일치");
+		return;
+	}	
+				
+	
+	
+	
+	
+	
 	
 	//---------------------- 최종선택 모달 ----------------------------
 	

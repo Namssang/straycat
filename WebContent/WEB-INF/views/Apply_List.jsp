@@ -75,31 +75,44 @@ $(document).ready(function()
 					<i class="fas fa-map-marker-alt"><span>${app.ADDRESS }</span></i>
 				</td>
 				
-				<td><span>매칭률</span><br> <span class="err">95% 일치</span>
+				<td>
+					<!-- 입양모집자의 매칭 설문 답 (hidden) -->
+					<c:choose>
+						<c:when test="${post.CAT_EXP eq 'RT3' }"><input type="hidden" id="ar_A1" value="${app.AP1 }"></c:when>
+						<c:otherwise><input type="hidden" id="ar_A1" value="${post.CAT_EXP }"></c:otherwise>
+					</c:choose>
+					<input type="hidden" id="ar_A2" value="${post.JOB }">
+					<c:choose>
+						<c:when test="${post.MARRIAGE eq 'RT3' }"><input type="hidden" id="ar_A3" value="${app.AP3 }"></c:when>
+						<c:otherwise><input type="hidden" id="ar_A3" value="${post.MARRIAGE }"></c:otherwise>
+					</c:choose>
+					<input type="hidden" id="ar_A4" value="${post.FAMILY_NUM }">
+					<input type="hidden" id="ap_A1" value="${app.AP1 }">
+					<input type="hidden" id="ap_A2" value="${app.AP2 }">
+					<input type="hidden" id="ap_A3" value="${app.AP3 }">
+					<input type="hidden" id="ap_A4" value="${app.AP4 }">
+				
+				<span>매칭률</span><br> <span class="err" id="match"></span>
 				</td>
 				
 				<td><span>활동점수</span><br> <span>250점</span></td>
 				
 				<td class="survey-result">
 				
-					<!-- 입양모집자의 매칭 설문 답 (hidden) -->
-					<input type="hidden" id="ar_A1" value="${post.CAT_EXP }">
-					<input type="hidden" id="ar_A2" value="${post.JOB }">
-					<input type="hidden" id="ar_A3" value="${post.MARRIAGE }">
-					<input type="hidden" id="ar_A4" value="${post.FAMILY_NUM }">
+				
 
 				
 					<ul class="list-group list-group-horizontal applicant_answer">
-					  <li class="list-group-item  flex-fill" id="A1" value="${app.A1 }" style="border: none">
-					  <ion-icon name="checkmark"></ion-icon>고양이 양육경험: ${app.A1 == RT1 ? '있음' : '없음' }</li>
+					  <li class="list-group-item  flex-fill" id="A1" value="${app.AP1 }" style="border: none">
+					  <ion-icon name="checkmark"></ion-icon>고양이 양육경험: ${app.AP1 == RT1 ? '있음' : '없음' }</li>
 					  <li class="list-group-item  flex-fill" id="A2" value="${app.A2 }" style="border: none">
-					  <ion-icon name="checkmark"></ion-icon>직업구분: ${app.A2 }</li>
+					  <ion-icon name="checkmark"></ion-icon>직업구분: ${app.AP2 }</li>
 					</ul>
 					<ul class="list-group list-group-horizontal"> 
-					  <li class="list-group-item  flex-fill" id="A3"  value="${app.A3 }" style="border: none">
-					  <ion-icon name="checkmark"></ion-icon>결혼여부 : ${app.A3 == RT1 ? '기혼' : '미혼' }</li>
-					  <li class="list-group-item  flex-fill" id="A4"  value="${app.A4 }" style="border: none">
-					  <ion-icon name="checkmark"></ion-icon>가족구성원: ${app.A4 }</li>
+					  <li class="list-group-item  flex-fill" id="A3"  value="${app.AP3 }" style="border: none">
+					  <ion-icon name="checkmark"></ion-icon>결혼여부 : ${app.AP3 == RT1 ? '기혼' : '미혼' }</li>
+					  <li class="list-group-item  flex-fill" id="A4"  value="${app.AP4 }" style="border: none">
+					  <ion-icon name="checkmark"></ion-icon>가족구성원: ${app.AP4 }</li>
 					</ul>
 				</td>
 				
